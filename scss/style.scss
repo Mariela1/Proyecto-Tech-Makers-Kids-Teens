@@ -1,0 +1,87 @@
+/* reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+// importamos los archivos secundarios
+
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "html/index";
+@import "utilidades/mapas";
+@import "utilidades/condicionales";
+@import "utilidades/extend";
+
+header nav ul{
+    @include row;
+    justify-content: flex-end;
+}
+
+menu{
+    display: flex;
+    justify-content: center,space-evenly;
+}
+main{
+        color: nth($colores, 2);
+    
+}
+
+.carousel-item{
+    @include flex;
+}
+
+.contenedor{
+    height: 100vh;
+    padding:1rem;
+    background-color: pink;
+    margin: 20px;
+    flex-flow: row-reverse wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    display:grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.8fr 2fr;
+    grid-template-areas: 
+    "header"
+    "footer"
+    ;
+
+}
+
+main .boton{
+    background-color: blue;
+    color: whitesmoke;
+    justify-content: center;
+    padding: 0.7rem;
+    box-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 5px white;
+    display:flex;
+} 
+
+body .boton{
+    background-color: blue;
+    color: whitesmoke;
+    justify-content: center;
+    padding: 0.7rem;
+    box-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 5px white;
+    display:flex;
+} 
+
+footer{
+    @each $redes, $color in $coloresRedes{
+        .#{$redes}{
+            background-color: $color;
+            font-size: 20px;
+        }
+ 
+    }
+
+    @include condicion (tomato);
+    width: ($medida-principal * 3)/3 ;
+
+}
+

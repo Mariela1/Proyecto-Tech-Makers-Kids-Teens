@@ -1,0 +1,16 @@
+%estilosSection{
+    text-align: center;
+    font-size: 2rem;
+    background-color: tomato;
+    padding: 1rem;
+}
+
+section{
+    @extend %estilosSection;
+    margin: 3rem;
+}
+.section-dos{
+    @extend %estilosSection;
+    margin: 5rem;
+}
+

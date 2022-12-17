@@ -1,0 +1,30 @@
+// Lo utilizamos para poder reutilizar codigo
+
+// mixin con parametros
+
+@mixin medidas($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+    background-color: tomato;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+@mixin flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin row{
+    list-style: none;
+    display:flex;
+    flex-direction:row;
+}
+
+@mixin estilosSection{
+    text-align: center;
+    font-size: 2rem;
+    background-color: tomato;
+    padding: 1rem;
+}
