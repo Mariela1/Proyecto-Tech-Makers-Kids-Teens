@@ -1,12 +1,12 @@
 // condicionales
 
-@mixin condicion ($colores-dos){
+@mixin condicion ($colores-uno){
 
-    background-color: $colores-dos;
+    background-color: $colores-uno;
     
     //condicion
-    @if $colores-dos == tomato{
-        border: 1px solid black;
+    @if $colores-uno == tomato{
+        border: 1px solid rgb(255, 0, 0);
         padding: 1rem;
     } @else {
         border: 2px solid orange;

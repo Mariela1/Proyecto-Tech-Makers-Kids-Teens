@@ -5,96 +5,321 @@
   box-sizing: border-box; }
 
 /* estilos de header */
-header {
+header nav ul {
+  list-style: block;
   display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem; }
 
 /* estilos de body */
 body {
   padding: 1rem;
   background-size: cover;
-  background: #22c1c3;
-  background: linear-gradient(264deg, #22c1c3 48%, rgba(178, 193, 51, 0.544153) 52%, #a1c145 54%, #8fc157 56%, #7ec169 58%, #26c1c0 68%, #fdbb2d 100%); }
+  background: linear-gradient(264deg, #f4fc0e 48%, rgba(255, 36, 237, 0.501) 52%, #45c1bd 54%, #e3f700 56%, #45f80e 58%, #f6fa87 68%, #e0e86f 100%); }
 
-section, .section-dos {
-  text-align: center;
-  font-size: 2rem;
-  background-color: tomato;
-  padding: 1rem; }
+/*
+section{
+    @extend %estilosSection;
+    margin: 3rem;
+}
+.section-dos{
+    @extend %estilosSection;
+    margin: 5rem;
+}
 
-section {
-  margin: 3rem; }
+*/
+body section div ul {
+  list-style: none; }
 
-.section-dos {
-  margin: 5rem; }
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
+.logo {
+  display: flex; }
 
 menu {
   display: flex;
   justify-content: center,space-evenly; }
 
-main {
-  color: yellow; }
+.conter {
+  display: grid;
+  background-color: black;
+  color: white;
+  height: 20vh;
+  flex-direction: flex-start;
+  margin: 5rem;
+  width: 1320px;
+  justify-content: space-around;
+  grid-template-columns: repeat(4);
+  grid-template-rows: repeat(1);
+  grid-template-areas: "header header header header"; }
 
+.alert {
+  display: flex;
+  justify-content: end;
+  font-size: white;
+  color: whitesmoke; }
+
+section .boton {
+  background-color: #f6f5f5;
+  display: none;
+  font-size: white;
+  color: whitesmoke;
+  padding: 0.7rem;
+  box-shadow: 1px 1px 5px red;
+  text-shadow: 1px 1px 5px white;
+  grid-area: header; }
+
+.btn {
+  color: white; }
+
+/*
+main{
+        color: nth($colores, 2);
+    
+}
+*/
 .carousel-item {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
   justify-content: space-around;
+  display: flex; }
+
+.imgnoticia {
+  display: flex;
+  justify-content: center;
   align-items: center; }
 
-.contenedor {
+.container {
+  display: flex;
+  background-color: #010101;
+  height: 25vh;
+  color: white;
+  justify-content: space-around; }
+
+section .container {
   height: 100vh;
-  padding: 1rem;
-  background-color: pink;
-  margin: 20px;
-  flex-flow: row-reverse wrap;
+  justify-content: space-around;
+  color: whitesmoke;
   gap: 1rem;
-  justify-content: center;
+  /*espacios entre filas y columnas */
   align-items: center;
+  justify-items: flex-end;
+  /*justify-content: space-around;*/
+  padding: 3rem;
+  margin: 2rem;
+  font-size: 1em;
+  background-color: white;
+  width: 100%; }
+
+.card-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: right; }
+
+.card {
+  display: flex;
+  align-items: right; }
+
+.facebook {
+  align-self: left;
+  display: flex;
+  flex-direction: row;
+  width: 15rem;
+  margin: 5rem;
+  gap: 15rem;
+  justify-content: center;
+  /* animaciones de imagen*/
+  animation-name: img-movimiento;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  transition: 2s; }
+
+.facebook2 {
+  display: flex;
+  flex-direction: column;
+  width: 1rem;
+  margin: 3rem;
+  gap: 1rem;
+  justify-content: space-around; }
+
+@keyframes img-movimiento {
+  to {
+    transform: scale(1); }
+  from {
+    transform: scale(1.3); } }
+
+.instagram {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  width: 15rem;
+  margin: 5rem;
+  gap: 15rem;
+  animation-name: img-movimiento;
+  animation-iteration-count: infinite;
+  animation-duration: 5s; }
+
+.instagram2 {
+  display: flex;
+  flex-direction: column;
+  width: 6rem;
+  margin: 2rem;
+  gap: 5rem; }
+
+.tiktok2 {
+  display: flex;
+  flex-direction: column;
+  width: 4rem;
+  margin: 2rem;
+  gap: 2.5rem; }
+
+.tiktok {
+  align-self: right;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 15rem;
+  margin: 5rem;
+  justify-content: space-evenly;
+  gap: 15rem;
+  animation-name: img-movimiento;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in; }
+
+.containactual {
+  display: flex;
+  height: 90vh;
+  width: 90rem;
+  background-color: black;
+  color: white;
+  justify-content: space-around; }
+
+.programas2 {
+  display: block;
+  gap: 1rem;
+  height: 150vh;
+  margin: 4.5rem;
+  width: 1350px;
+  font-size: 1em;
+  background-color: #040404;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-self: center; }
+
+.texto {
+  flex-direction: flex-start;
+  flex-wrap: wrap; }
+
+/*estilos del menu y header */
+.color-menu {
+  background-color: #ff0c0c; }
+
+.color-boton {
+  background-color: #ff47e3;
+  color: white;
+  font-size: white; }
+
+.color-header {
+  background: linear-gradient(264deg, #e6ee07 48%, rgba(255, 36, 237, 0.501) 52%, #45c1bd 54%, #e3f700 56%, #45f80e 58%, #f6fa87 68%, #eeff00 100%); }
+
+.color-boton:hover {
+  background-color: #c847ff;
+  color: whitesmoke; }
+
+div img:hover {
+  filter: drop-shadow(10px 10px 10px);
+  transform: scale(1.1);
+  animation-name: img-movimiento;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: ease-in; }
+
+img {
+  justify-content: space-around;
   display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 0.8fr 2fr;
-  grid-template-areas: "header" "footer"; }
+  grid-template-columns: repeat(3);
+  width: 20%; }
 
-main .boton {
-  background-color: blue;
-  color: whitesmoke;
+footer .containerfoot {
+  display: grid;
+  align-content: center;
+  width: 1320px;
+  padding: 2rem;
+  margin: 2rem;
+  gap: 1rem;
+  background-color: black;
+  font-weight: bold;
+  transform: scale(1);
+  color: white;
+  justify-content: space-evenly;
+  height: 60vh;
+  padding: 1rem; }
+
+footer .containerfoot img {
   justify-content: center;
-  padding: 0.7rem;
-  box-shadow: 1px 1px 5px black;
-  text-shadow: 1px 1px 5px white;
-  display: flex; }
+  justify-items: center;
+  box-shadow: 2px 2px 2px white; }
 
-body .boton {
-  background-color: blue;
-  color: whitesmoke;
-  justify-content: center;
-  padding: 0.7rem;
-  box-shadow: 1px 1px 5px black;
-  text-shadow: 1px 1px 5px white;
-  display: flex; }
+section .contain2 {
+  display: grid;
+  align-content: center;
+  width: 1320px;
+  margin: 5rem;
+  height: 60vh;
+  gap: 1rem;
+  background-color: #020202;
+  transform: scale(1);
+  font-weight: bold;
+  color: white;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3);
+  grid-template-rows: repeat(1);
+  justify-content: space-between;
+  justify-items: center; }
 
-footer {
-  background-color: tomato;
-  border: 1px solid black;
-  padding: 1rem;
-  width: 300px; }
-  footer .facebook {
-    background-color: blue;
-    font-size: 20px; }
-  footer .instagram {
-    background-color: tomato;
-    font-size: 20px; }
-  footer .tiktok {
-    background-color: black;
-    font-size: 20px; }
+/* mq */
+@media screen and (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(1);
+    grid-template-rows: repeat(2);
+    grid-template-areas: "p p" "s s"; }
+  section .container {
+    display: block;
+    gap: 1rem;
+    height: 155vh;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1em;
+    background-color: #181717;
+    display: grid; }
+  section footer {
+    display: none;
+    background-color: white; }
+  .contain-footer {
+    display: none; }
+  footer {
+    display: none; } }
+
+@media screen and (min-width: 1024px) {
+  section .container {
+    height: 100vh; }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    grid-template-areas: "p p" "s s";
+    justify-content: center;
+    justify-items: center; }
+    main main p {
+      grid-area: p; }
+    main main s {
+      grid-area: s; }
+  section footer div {
+    display: block; }
+  footer {
+    display: block; } }
