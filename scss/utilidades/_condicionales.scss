@@ -1,8 +1,8 @@
 // condicionales
 
-@mixin condicion ($colores-uno){
+@mixin condicion ($colores-cuatro){
 
-    background-color: $colores-uno;
+    background-color: $colores-cuatro;
     
     //condicion
     @if $colores-uno == tomato{
